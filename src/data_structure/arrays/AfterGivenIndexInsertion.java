@@ -1,6 +1,6 @@
 package data_structure.arrays;
 
-public class GivenIndex {
+public class AfterGivenIndexInsertion {
     public static void main(String[] args) {
         int number = 5, index=3, value=10;
         int[] A = new int[number+1];
@@ -17,7 +17,7 @@ public class GivenIndex {
         for(int i= number-1; i>=index-1; i--) {
             A[i+1] = A[i];
         }
-        A[index-1] = value;
+        A[index] = value;
 
         System.out.println("After Inserting: ");
         for(int i=0; i<=number; i++) {
