@@ -14,7 +14,7 @@ public class AfterGivenIndexInsertion {
             System.out.println(i + " => " + A[i]);
         }
 
-        for(int i= number-1; i>=index-1; i--) {
+        for(int i= number-1; i>=index; i--) {
             A[i+1] = A[i];
         }
         A[index] = value;
