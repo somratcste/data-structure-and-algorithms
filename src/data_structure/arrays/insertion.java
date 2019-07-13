@@ -2,7 +2,7 @@ package data_structure.arrays;
 
 import java.util.Scanner;
 
-public class insertion {
+public class Insertion {
     public static void main(String[] args) {
 
         int number, position, value;
