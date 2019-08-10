@@ -1,4 +1,4 @@
-package stack;
+package data_structure.stack;
 
 public class FixedSizeArrayStack {
 
@@ -70,11 +70,11 @@ public class FixedSizeArrayStack {
         fixedSizeArrayStack.push(10);
         fixedSizeArrayStack.push(50);
         fixedSizeArrayStack.push(5);
-        System.out.println(fixedSizeArrayStack.toString());
-        System.out.println(fixedSizeArrayStack.size());
-        System.out.println(fixedSizeArrayStack.isEmpty());
-        System.out.println(fixedSizeArrayStack.top());
-        System.out.println(fixedSizeArrayStack.pop());
-        System.out.println(fixedSizeArrayStack.toString());
+        System.out.println("Full Stack: " + fixedSizeArrayStack.toString());
+        System.out.println("Size: " + fixedSizeArrayStack.size());
+        System.out.println("Is Empty check: " + fixedSizeArrayStack.isEmpty());
+        System.out.println("Top: " + fixedSizeArrayStack.top());
+        System.out.println("Pop: " + fixedSizeArrayStack.pop());
+        System.out.println("Full Stack After Remove: " + fixedSizeArrayStack.toString());
     }
 }
