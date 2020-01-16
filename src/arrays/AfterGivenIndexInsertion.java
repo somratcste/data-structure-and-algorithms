@@ -1,4 +1,4 @@
-package data_structure.arrays;
+package arrays;
 
 public class AfterGivenIndexInsertion {
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
-package data_structure.arrays;
+package arrays;
 
 import java.util.Scanner;
 
-public class Insertion {
+public class insertion {
     public static void main(String[] args) {
 
         int number, position, value;

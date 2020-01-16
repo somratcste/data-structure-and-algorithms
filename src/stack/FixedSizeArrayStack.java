@@ -1,4 +1,4 @@
-package data_structure.stack;
+package stack;
 
 public class FixedSizeArrayStack {
 

@@ -1,8 +1,10 @@
-package data_structure.arrays;
+package arrays;
 
-public class ArrayInsertSequential {
+public class ArrayInsertionDifferentPosition {
     public static void main(String[] args) {
-        int number = 5, index=3, value1=10, value2=20, sequentialCount = 2;
+        int number = 5, index=3, sequentialCount = 2;
+        int value1=10, value2=20, value3 = 30;
+        int position1 = 2, position2 = 5, position3 = 8;
         int[] A = new int[number+sequentialCount];
 
         for(int i=0; i<number; i++) {
