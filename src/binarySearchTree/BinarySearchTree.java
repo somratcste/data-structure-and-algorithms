@@ -1,5 +1,12 @@
 package binarySearchTree;
 
+/**
+ * https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
+ * https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
+ * Inorder (Left, Root, Right) : 4 2 5 1 3
+ * Preorder (Root, Left, Right) : 1 2 4 5 3
+ * Postorder (Left, Right, Root) : 4 5 2 3 1
+ */
 public class BinarySearchTree {
 
     /**
