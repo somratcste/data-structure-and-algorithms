@@ -8,27 +8,26 @@ import java.util.LinkedList;
  */
 public class DFS {
 
-    private int V; // number of vertices
+    private int V;
     private LinkedList<Integer> adj[];
 
     DFS (int v) {
-        V = v;
-        adj = new LinkedList[v];
-        for (int i=0; i<v; i++) {
+        this.V = v;
+        adj = new LinkedList[V];
+        for (int i = 0; i < v; i++) {
             adj[i] = new LinkedList<>();
         }
     }
 
-    void addEdge(int v, int w) {
-        adj[v].add(w);
+    void addEdge (int v, int e) {
+        adj[v].add(e);
     }
 
-    void DFSUtil (int v, boolean visited[]) {
-        visited[v] = true;
-        System.out.print(v + " ");
+    void DFSUtil(int source, boolean visited[]) {
+        visited[source] = true;
+        System.out.print(source + " ");
 
-        // recursion for all the vertices adjacent to this vertex
-        Iterator<Integer> i = adj[v].listIterator();
+        Iterator<Integer> i = adj[source].listIterator();
         while (i.hasNext()) {
             int n = i.next();
             if (!visited[n]) {
@@ -37,10 +36,13 @@ public class DFS {
         }
     }
 
-    // function to do for dfs traversal - uses recursive DFSUtil() method
-    void traverse (int v) {
+    void traverse (int source) {
         boolean visited[] = new boolean[V];
-        DFSUtil(v, visited);
+        for (int i = 0; i<V; i++) {
+            if (!visited[i]) {
+                DFSUtil(i, visited);
+            }
+        }
     }
 
     public static void main(String[] args) {
