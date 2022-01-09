@@ -8,34 +8,32 @@ import java.util.LinkedList;
  */
 public class BFS {
 
-    private int V; // number of vertices
-    private LinkedList<Integer> adj[]; // adjacency lists
+    private int V;
+    private LinkedList<Integer> adj[];
 
     BFS(int v) {
-        V = v;
+        this.V = v;
         adj = new LinkedList[v];
-        for (int i=0; i<v; i++) {
+        for (int i = 0; i < v; i++) {
             adj[i] = new LinkedList<>();
         }
     }
 
-    // function to add an edge into the graph
-    void addEdge (int v, int w) {
-        adj[v].add(w);
+    void addEdge (int v, int e) {
+        adj[v].add(e);
     }
 
-    // print bfs traversal from a given source s
-    void traverse (int s) {
+    void traverse (int source) {
         boolean visited[] = new boolean[V];
-        LinkedList<Integer> queue = new LinkedList<Integer>();
-        visited[s] = true;
-        queue.add(s);
+        LinkedList<Integer> queue = new LinkedList<>();
+        queue.add(source);
 
-        while (queue.size() != 0) {
-            s = queue.poll();
-            System.out.print(s + " ");
+        while (queue.size() != 0 ) {
+            source = queue.poll();
+            visited[source] = true;
+            System.out.print(source + " ");
 
-            Iterator<Integer> i = adj[s].listIterator();
+            Iterator<Integer> i = adj[source].listIterator();
             while (i.hasNext()) {
                 int n = i.next();
                 if (!visited[n]) {
