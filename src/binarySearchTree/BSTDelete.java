@@ -40,6 +40,7 @@ public class BSTDelete{
                 return root.left;
             }
             // 2. node with two children: get the inorder successor (smallest in the right subtree)
+            // inorder successor only need when right child is not empty
             root.key = minValue(root.right);
             // 3. delete the inorder successor
             root.right = deleteRec(root.right, root.key);
