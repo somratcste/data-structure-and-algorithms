@@ -4,6 +4,7 @@ package linkedList;
  * https://www.geeksforgeeks.org/linked-list-set-1-introduction/
  * https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
  * https://www.geeksforgeeks.org/linked-list-set-3-deleting-node/
+ * https://www.geeksforgeeks.org/delete-a-linked-list-node-at-a-given-position/
  */
 public class SinglyLinkedList {
     Node head;
@@ -58,6 +59,29 @@ public class SinglyLinkedList {
         }
     }
 
+    // delete first occurrence of key(data) in linked list
+    public void deleteNode(int data) {
+        Node temp = head, prev = null;
+        // If head node itself holds the key to be deleted
+        if (temp != null && temp.data == data) {
+            head = temp.next;
+            return;
+        }
+
+        // Search for the key to be deleted, keep track of
+        // the previous node as we need to change temp.next
+        while (temp != null && temp.data != data) {
+            prev = temp;
+            temp = temp.next;
+        }
+
+        // If key was not present in linked list
+        if (temp == null) return;
+
+        // Unlink the node from linked list
+        prev.next = temp.next;
+    }
+
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
         // 6->null
@@ -72,6 +96,11 @@ public class SinglyLinkedList {
         // 1->7->8->6->4->null
         list.insertAfter(list.head.next, 8);
 
+        list.traverse();
+
+        // 1->8->6->4->null
+        list.deleteNode(7);
+        System.out.println("\nAfter Delete 7");
         list.traverse();
     }
 }
