@@ -3,6 +3,11 @@ package binaryTree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+
+/**
+ * https://www.geeksforgeeks.org/binary-tree-set-1-introduction/
+ * https://www.geeksforgeeks.org/insertion-in-a-binary-tree-in-level-order/
+ */
 public class BTInsertion {
 
     static class Node {
