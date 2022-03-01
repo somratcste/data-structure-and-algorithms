@@ -3,9 +3,15 @@ package binarySearchTree;
 /**
  * https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
  * https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
- * Inorder (Left, Root, Right) : 4 2 5 1 3
- * Preorder (Root, Left, Right) : 1 2 4 5 3
- * Postorder (Left, Right, Root) : 4 5 2 3 1
+ * Inorder (Left, Root, Right)
+ * Preorder (Root, Left, Right)
+ * Postorder (Left, Right, Root)
+ *
+ * Properties:-
+ * The left subtree of a node contains only nodes with keys lesser than the node’s key.
+ * The right subtree of a node contains only nodes with keys greater than the node’s key.
+ * The left and right subtree each must also be a binary search tree.
+ * There must be no duplicate nodes.
  */
 public class BinarySearchTree {
 
