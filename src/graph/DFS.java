@@ -5,6 +5,8 @@ import java.util.LinkedList;
 
 /**
  * https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
+ * Time complexity: O(V + E), where V is the number of vertices and E is the number of edges in the graph.
+ * Space Complexity: O(V), since an extra visited array of size V is required.
  */
 public class DFS {
 

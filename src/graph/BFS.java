@@ -5,11 +5,12 @@ import java.util.LinkedList;
 
 /**
  * https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
+ * Time Complexity: O(V+E) where V is a number of vertices in the graph and E is a number of edges in the graph.
  */
 public class BFS {
 
-    private int V;
-    private LinkedList<Integer> adj[];
+    private int V; // No. of vertices
+    private LinkedList<Integer> adj[]; //Adjacency Lists
 
     BFS(int v) {
         this.V = v;
