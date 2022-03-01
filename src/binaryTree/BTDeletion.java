@@ -3,6 +3,16 @@ package binaryTree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * https://www.geeksforgeeks.org/deletion-binary-tree/
+ */
+
+/**
+ * Algorithm
+ * 1. Starting at the root, find the deepest and rightmost node in binary tree and node which we want to delete.
+ * 2. Replace the deepest rightmost node’s data with the node to be deleted.
+ * 3. Then delete the deepest rightmost node.
+ */
 public class BTDeletion {
 
     static class Node {
@@ -89,6 +99,8 @@ public class BTDeletion {
                 q.add(temp.right);
             }
         }
+        // now temp will be the rightmost deepest tree
+        // KeyNode will be the node we want to delete
         if (keyNode != null) {
             int x = temp.key;
             deleteDeepest(root, temp);

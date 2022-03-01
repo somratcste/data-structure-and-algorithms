@@ -2,8 +2,9 @@ package binaryTree;
 
 /**
  * https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+ * DFS traverdal in tree means a tree can traverse 3 different ways in,pre and post order
  */
-public class AllOrderTraversalTree {
+public class DFS {
     // Java program for different tree traversals
 
     /* Class containing left and right child of current
