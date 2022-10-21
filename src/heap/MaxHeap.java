@@ -52,9 +52,9 @@ public class MaxHeap {
 
     public void print() {
         for (int i = 0; i < (size/2); i++) {
-            System.out.println("Parent Node: " + heap[i]);
-            if (leftChild(i) < size) { System.out.println("Left Child Node: " + heap[leftChild(i)] );}
-            if (rightChild(i) < size) { System.out.println("Right Child Node: " + heap[rightChild(i)]);}
+            System.out.print("Parent Node: " + heap[i]);
+            if (leftChild(i) < size) { System.out.print(" Left Child Node: " + heap[leftChild(i)] );}
+            if (rightChild(i) < size) { System.out.print(" Right Child Node: " + heap[rightChild(i)]);}
             System.out.println();
         }
     }
