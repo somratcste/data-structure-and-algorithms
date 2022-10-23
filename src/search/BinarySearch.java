@@ -3,7 +3,7 @@ package search;
 /**
  * https://www.geeksforgeeks.org/binary-search/
  * time complexity: O(log n) || Space Complexity: O(1)
- * int mid = low + (high – low)/2;
+ * int mid = low + (high – low)/2; to avoid SumOverflow problem for a big int sum
  */
 public class BinarySearch {
 
